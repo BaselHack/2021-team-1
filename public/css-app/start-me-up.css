@@ -7878,6 +7878,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 3rem; }
   .footer p + p {
     margin-top: 1rem; }
+  .footer a:hover {
+    color: white; }
 
 /*
 .noty_body {
