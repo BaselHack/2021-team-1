@@ -11,7 +11,7 @@ $(document).ready(function() {
   $("#navbar").html(`<div class="container">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      StartMeUp
+      🚀 In Basel
       <!--
       <figure class="image">
         <img class="is-rounded" src="" height="30" width="30" />
@@ -46,15 +46,15 @@ $(document).ready(function() {
       <a class="navbar-item ${
         pathname === "/starting-a-company-in-switzerland.html" ? "is-active" : ""
       }" href="starting-a-company-in-switzerland.html">
-        Starting a Company in Basel/Switzerland
+        Starting a Company
       </a>
       <a class="navbar-item ${
         pathname === "/investing-in-switzerland.html" ? "is-active" : ""
       }" href="investing-in-switzerland.html">
-        Investing in Basel/Switzerland
+        Investing
       </a>
       <a class="navbar-item ${pathname === "/about.html" ? "is-active" : ""}" href="about.html">
-        About
+        About&nbsp;<span style="color:#04689f;">Start</span><span style="color:#ffaa00;">Me</span><span style="color:#d40000;">Up</span>
       </a>
     </div>
 
