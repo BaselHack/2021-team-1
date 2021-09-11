@@ -133,6 +133,8 @@
 
           $("#title-select select").change(onTitleSelectChange);
 
+          $("#last-updated").html(`Last updated: ${new Date().toLocaleString()}`);
+
           // global
           var markers = addMarkers(map, filterByResources(data, startupResources));
         });
@@ -252,7 +254,7 @@
               <p class="">
                 <a href="https://github.com/baselhack/start-me-up"><i class="fab fa-github fa-fw fa-2x"></i></a>
               </p>
-              <p class="has-text-light">Last updated: xxx</p>
+              <p id="last-updated" class="has-text-light"></p>
             </div>
           </div>
         </div>
