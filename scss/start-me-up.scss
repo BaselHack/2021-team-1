@@ -1,0 +1,73 @@
+// @import url("https://fonts.googleapis.com/css?family=Montserrat");
+// @import url("https://fonts.googleapis.com/css?family=Lato");
+
+// Set your brand colors
+
+// $purple: #8a4d76;
+// $pink: #fa7c91;
+// $brown: #757763;
+// $beige-light: #d0d1cd;
+// $beige-lighter: #eff0eb;
+
+// default bulma
+// $primary: $purple;
+// $link: #1e21d1;
+// $info: #12a750;
+
+/*
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$dark: $grey-darker;
+$text: $grey-dark;
+
+$grey-darker: hsl(0, 0%, 21%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 71%);
+$grey-lighter: hsl(0, 0%, 86%);
+*/
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+
+// Update some of Bulma's component variables
+/*
+$control-border-width: 2px;
+$input-background-color: $beige-lighter;
+$input-border-color: transparent;
+$input-shadow: none;
+*/
+
+// Import the rest of Bulma
+@import "../node_modules/bulma/bulma.sass";
+
+.link-underlined {
+  text-decoration: underline;
+}
+
+.link-underlined:hover {
+  text-decoration: none;
+}
+
+.is-text-underlined {
+  text-decoration: underline;
+}
+
+.footer {
+  padding: 3rem 1.5rem 3rem;
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+/*
+.noty_body {
+  word-break: break-all;
+}
+*/
+
+//
+// ideas from https://aldi.github.io/awesome-bulma-templates/templates/rent/rent.html
+//
+

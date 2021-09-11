@@ -1,0 +1,29 @@
+{
+  "name": "start-me-up",
+  "version": "1.0.0",
+  "description": "Startup Ecosystem",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "npm run sass:build && node-sass -w scss -o public/css-app",
+    "sass:build": "node-sass scss -o public/css-app --source-map true",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ui:sync": "sleep 1 && browser-sync start --proxy=localhost:8000 --files='**/*.css, **/*.mst, **/*.js, **/*.json' --ignore=node_modules --reload-delay 10 --no-ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaselHack/start-me-up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaselHack/start-me-up/issues"
+  },
+  "homepage": "https://github.com/BaselHack/start-me-up#readme",
+  "dependencies": {
+    "bulma": "0.9.3",
+    "node-sass": "6.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}

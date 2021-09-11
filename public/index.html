@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Start me up!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    -->
+
+    <link rel="stylesheet" type="text/css" href="/css/font-lato.css" />
+    <link rel="stylesheet" type="text/css" href="/css/font-montserrat.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome-free-5.11.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/noty.css" />
+    <!--<link rel="stylesheet" type="text/css" href="/css/noty-themes/semanticui.css" />-->
+    <link rel="stylesheet" type="text/css" href="/css/noty-themes/bulma.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css-app/start-me-up.css" />
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+
+    <script src="/js/noty.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /*
+        new Noty({
+          theme: "bulma",
+          type: "{{notification.type}}",
+          text: "{{notification.message}}",
+          timeout: 3500
+          // container: ".notification"
+        }).show();
+        */
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="main-content-container">
+      <nav class="navbar is-light has-shadow" role="navigation" aria-label="main navigation">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              StartMeUp
+              <!--
+              <figure class="image">
+                <img class="is-rounded" src="" height="30" width="30" />
+              </figure>
+              -->
+            </a>
+
+            <a
+              role="button"
+              class="navbar-burger burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <!--
+              <a class="navbar-item" href="/">
+                Home
+              </a>
+              -->
+            </div>
+
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <span class="tag is-dark">
+                  0.0.1
+                </span>
+              </div>
+              <!--
+              <div class="navbar-item">
+                <form method="post" action="/login">
+                  <div class="field is-grouped is-grouped-multiline">
+                    <p class="control">
+                      <input name="username" class="input" type="text" placeholder="username" />
+                    </p>
+                    <p class="control">
+                      <input name="password" class="input" type="password" placeholder="password" />
+                    </p>
+                    <p class="control">
+                      <button id="login" type="submit" class="button is-primary">
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                </form>
+              </div>
+              -->
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="main-content">
+        <section class="hero is-light">
+          <div class="hero-body">
+            <div class="container has-text-centered">
+              <h1 class="title m-t-2">
+                <span class="is-size-2 has-text-centered is-block">
+                  I'm a startup
+                </span>
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ">
+          <div class="container background-result"></div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <p>
+                <a href="https://github.com/baselhack/start-me-up"><i class="fab fa-github fa-fw fa-2x"></i></a>
+              </p>
+              <p>Last updated: xxx</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
