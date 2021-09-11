@@ -36,8 +36,6 @@ $(document).ready(function() {
     $("#title-select select").change(onTitleSelectChange);
     $("#data-table-filter").keyup(onDataTableFilterChange);
 
-    $("#last-updated").html(`Last updated: ${new Date().toLocaleString()}`);
-
     $("#data-table tbody").html(getDataTableRowsHTML(data, ""));
   });
 
