@@ -28,6 +28,21 @@
 		"latlong" : [47.54115,7.59287],
 		"address" : "LaunchLabs Basel\nDornacherstrasse 192\n4053 Basel",
 		"website" : "https://www.innovationbasel.ch/"
+	},
+	{
+		"meta" : {
+			"id" : "0671e3c6-a860-4cdc-b77b-3551aeac81d4",
+			"lastUpdated" : 1631362656526,
+			"owner" : "matthias.cullmann@gmail.com" 
+		},
+		"name": "BaselHack",
+		"description": "BaselHack is an annual hackathon that has been held since 2017. Young and young-at-heart developers, technology fanatics, designers and other interested persons meet in every autumn and spend a weekend tinkering and developing various ideas. The goal of the hackathon is to get from an idea or a concrete problem to a first, functional prototype (software or hardware) in just a few hours. At the end of the hackathon weekend, the teams - which have come together at the beginning of the hackathon - present their prototypes. A technically experienced jury looks at the presentations and prototypes, and chooses the best in various categories.",
+		"image": "https://www.baselhack.ch/images/app/logos/baselhack_color.svg",
+		"ressource" : ["Workshop","Competition"],
+		"email" : "info@baselhack.ch",
+		"latlong" : [47.5539521, 7.5949911],
+		"address" : "Dufourstr. 11\nBasel 4010\nSwitzerland",
+		"website" : "https://www.baselhack.ch/"
 	}
 ]
 
