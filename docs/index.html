@@ -2,13 +2,29 @@
 <html>
   <head>
     <title>Start me up!</title>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!--
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" type="text/css" href="css/font-lato.css" />
     <link rel="stylesheet" type="text/css" href="css/font-montserrat.css" />
@@ -36,83 +52,12 @@
       crossorigin=""
     ></script>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        // Check for click events on the navbar burger icon
-        $(".navbar-burger").click(function() {
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          $(".navbar-burger").toggleClass("is-active");
-          $(".navbar-menu").toggleClass("is-active");
-        });
-      });
-    </script>
+    <script type="text/javascript"></script>
   </head>
 
   <body>
     <div id="main-content-container">
-      <nav class="navbar is-light has-shadow" role="navigation" aria-label="main navigation">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-              StartMeUp
-              <!--
-              <figure class="image">
-                <img class="is-rounded" src="" height="30" width="30" />
-              </figure>
-              -->
-            </a>
-
-            <a
-              role="button"
-              class="navbar-burger burger"
-              aria-label="menu"
-              aria-expanded="false"
-              data-target="navbarBasicExample"
-            >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-
-          <div id="" class="navbar-menu">
-            <div class="navbar-start">
-              <!--
-              <a class="navbar-item" href="/">
-                Home
-              </a>
-              -->
-            </div>
-
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <span class="tag is-dark">
-                  0.0.1
-                </span>
-              </div>
-              <!--
-              <div class="navbar-item">
-                <form method="post" action="/login">
-                  <div class="field is-grouped is-grouped-multiline">
-                    <p class="control">
-                      <input name="username" class="input" type="text" placeholder="username" />
-                    </p>
-                    <p class="control">
-                      <input name="password" class="input" type="password" placeholder="password" />
-                    </p>
-                    <p class="control">
-                      <button id="login" type="submit" class="button is-primary">
-                        Login
-                      </button>
-                    </p>
-                  </div>
-                </form>
-              </div>
-              -->
-            </div>
-          </div>
-        </div>
-      </nav>
+      <nav id="navbar" class="navbar is-light has-shadow" role="navigation" aria-label="main navigation"></nav>
 
       <div id="main-content">
         <section class="hero is-light">
@@ -143,7 +88,16 @@
           <div class="container">
             <div class="columns">
               <div class="column is-8 is-offset-2-tablet">
-                <input id="data-table-filter" class="input is-large is-rounded" type="text" placeholder="search" />
+                <div class="field has-addons">
+                  <p class="control is-expanded">
+                    <input id="data-table-filter" class="input is-large" type="text" placeholder="search" />
+                  </p>
+                  <p class="control">
+                    <a id="data-table-filter-clear" class="button is-large">
+                      <i class="fas fa-times-circle"></i>
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -165,20 +119,11 @@
           </div>
         </section>
       </div>
-      <footer class="footer has-background-dark">
-        <div class="container">
-          <div class="columns">
-            <div class="column">
-              <p class="">
-                <a href="https://github.com/baselhack/start-me-up"><i class="fab fa-github fa-fw fa-2x"></i></a>
-              </p>
-              <p id="last-updated" class="has-text-light"></p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <footer id="footer" class="footer has-background-dark"></footer>
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
   </body>
 </html>
