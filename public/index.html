@@ -45,17 +45,7 @@
           $(".navbar-menu").toggleClass("is-active");
         });
 
-        /*
-        new Noty({
-          theme: "bulma",
-          type: "{{notification.type}}",
-          text: "{{notification.message}}",
-          timeout: 3500
-          // container: ".notification"
-        }).show();
-        */
-
-        const map = L.map("mapid").setView([47.554662, 7.589119], 13);
+        const map = L.map("mapid").setView([47.541232, 7.604589], 13);
 
         L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
           attribution:
@@ -68,38 +58,71 @@
             "pk.eyJ1IjoidmljLWNvZGVjYW1wIiwiYSI6ImNrdGZueGZ1azBhMDYycG1yY2ZmNGJ4cWQifQ.xoYa6-TrQxRND1wHjGYkwg"
         }).addTo(map);
 
-        const addMarkers = function(map, items) {
-          const markers = [];
+        $.getJSON("data.json", function(data) {
+          console.log(data);
 
-          const marker = L.marker([47.554662, 7.589119])
-            .addTo(map)
-            .bindPopup("<b>Hello world!</b><br />I am a popup.")
-            .openPopup();
+          const filterByResources = function(data, resources) {
+            const result = [];
 
-          markers.push(marker);
+            for (let i = 0; i < data.length; ++i) {
+              const item = data[i];
+              for (let j = 0; j < resources.length; ++j) {
+                if (item.ressource.includes(resources[j])) {
+                  result.push(item);
+                }
+              }
+            }
 
-          return markers;
-        };
+            return result;
+          };
 
-        const clearMarkers = function(map, markers) {
-          for (let i = 0; i < markers.length; ++i) {
-            map.removeLayer(markers[i]);
-          }
-        };
+          const addMarkers = function(map, items) {
+            const markers = [];
 
-        const onTitleSelectChange = function(e) {
-          const selectedIndex = e.target.selectedIndex;
-          clearMarkers(map, markers);
+            for (let i = 0; i < items.length; ++i) {
+              const item = items[i];
 
-          if (selectedIndex === 0) {
-            markers = addMarkers(map, []);
-          }
-        };
+              const marker = L.marker(item.latlong)
+                .addTo(map)
+                .bindPopup(`<b>${item.name}</b><br />${item.description}`)
+                .openPopup();
 
-        $("#title-select select").change(onTitleSelectChange);
+              markers.push(marker);
+            }
 
-        // global
-        var markers = addMarkers(map, []);
+            return markers;
+          };
+
+          const clearMarkers = function(map, markers) {
+            for (let i = 0; i < markers.length; ++i) {
+              map.removeLayer(markers[i]);
+            }
+          };
+
+          const onTitleSelectChange = function(e) {
+            const selectedIndex = e.target.selectedIndex;
+            clearMarkers(map, markers);
+
+            if (selectedIndex === 0) {
+              markers = addMarkers(map, filterByResources(data, ["Infrastructure"]));
+            }
+          };
+
+          $("#title-select select").change(onTitleSelectChange);
+
+          // global
+          var markers = addMarkers(map, filterByResources(data, ["Infrastructure"]));
+        });
+
+        /*
+        new Noty({
+          theme: "bulma",
+          type: "{{notification.type}}",
+          text: "{{notification.message}}",
+          timeout: 3500
+          // container: ".notification"
+        }).show();
+        */
       });
     </script>
 
