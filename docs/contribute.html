@@ -85,68 +85,8 @@
 
   <body>
     <div id="main-content-container">
-      <nav class="navbar is-light has-shadow" role="navigation" aria-label="main navigation">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-              StartMeUp
-            </a>
-            <a class="navbar-item is-active" href="contribute.html">
-              Contribute
-            </a>
-
-            <a
-              role="button"
-              class="navbar-burger burger"
-              aria-label="menu"
-              aria-expanded="false"
-              data-target="navbarBasicExample"
-            >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-
-          <div id="" class="navbar-menu">
-            <div class="navbar-start">
-              <!--
-              <a class="navbar-item" href="/">
-                Home
-              </a>
-              -->
-            </div>
-
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <span class="tag is-dark">
-                  0.0.1
-                </span>
-              </div>
-              <!--
-              <div class="navbar-item">
-                <form method="post" action="/login">
-                  <div class="field is-grouped is-grouped-multiline">
-                    <p class="control">
-                      <input name="username" class="input" type="text" placeholder="username" />
-                    </p>
-                    <p class="control">
-                      <input name="password" class="input" type="password" placeholder="password" />
-                    </p>
-                    <p class="control">
-                      <button id="login" type="submit" class="button is-primary">
-                        Login
-                      </button>
-                    </p>
-                  </div>
-                </form>
-              </div>
-              -->
-            </div>
-          </div>
-        </div>
-      </nav>
-
+        <nav id="navbar" class="navbar is-light has-shadow" role="navigation" aria-label="main navigation"></nav>
+        
       <div id="main-content">
         <section class="hero is-light">
           <div class="hero-body">
@@ -261,19 +201,9 @@
            
           </div>
         </section>
+         <footer id="footer" class="footer has-background-dark"></footer>
       </div>
-      <footer class="footer has-background-dark">
-        <div class="container">
-          <div class="columns">
-            <div class="column">
-              <p class="">
-                <a href="https://github.com/baselhack/start-me-up"><i class="fab fa-github fa-fw fa-2x"></i></a>
-              </p>
-              <p id="last-updated" class="has-text-light"></p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
   </body>
 </html>
