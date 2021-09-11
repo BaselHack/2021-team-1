@@ -45,6 +45,9 @@
           $(".navbar-menu").toggleClass("is-active");
         });
 
+        const startupResources = ["Infrastructure", "Accelerator"];
+        const investorResources = [];
+
         const map = L.map("mapid").setView([47.541232, 7.604589], 13);
 
         L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -57,6 +60,15 @@
           accessToken:
             "pk.eyJ1IjoidmljLWNvZGVjYW1wIiwiYSI6ImNrdGZueGZ1azBhMDYycG1yY2ZmNGJ4cWQifQ.xoYa6-TrQxRND1wHjGYkwg"
         }).addTo(map);
+
+        const getPopupHTML = function(item) {
+          const itemImage = `<p><figure class="image "><img src="${item.image}"></figure></p>`;
+          const tagsHTML = `<p class="tags">${item.ressource.map(r => `<span class="tag">${r}</span>`).join(" ")}</p>`;
+
+          const result = `<p><b><a href="${item.website}">${item.name}</a></b></p><p>${item.description}</p>${tagsHTML}`;
+
+          return result;
+        };
 
         $.getJSON("data.json", function(data) {
           console.log(data);
@@ -84,7 +96,7 @@
 
               const marker = L.marker(item.latlong)
                 .addTo(map)
-                .bindPopup(`<b>${item.name}</b><br />${item.description}`)
+                .bindPopup(getPopupHTML(item))
                 .openPopup();
 
               markers.push(marker);
@@ -104,14 +116,14 @@
             clearMarkers(map, markers);
 
             if (selectedIndex === 0) {
-              markers = addMarkers(map, filterByResources(data, ["Infrastructure"]));
+              markers = addMarkers(map, filterByResources(data, startupResources));
             }
           };
 
           $("#title-select select").change(onTitleSelectChange);
 
           // global
-          var markers = addMarkers(map, filterByResources(data, ["Infrastructure"]));
+          var markers = addMarkers(map, filterByResources(data, startupResources));
         });
 
         /*
