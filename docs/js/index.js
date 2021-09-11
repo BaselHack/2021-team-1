@@ -28,7 +28,13 @@ $(document).ready(function() {
       }
     };
 
+    const onDataTableFilterChange = function(e) {
+      const value = e.target.value;
+      $("#data-table tbody").html(getDataTableRowsHTML(data, value));
+    };
+
     $("#title-select select").change(onTitleSelectChange);
+    $("#data-table-filter").keyup(onDataTableFilterChange);
 
     $("#last-updated").html(`Last updated: ${new Date().toLocaleString()}`);
 
@@ -111,6 +117,17 @@ const getDataTableRowsHTML = function(data, filter) {
 
   for (let i = 0; i < data.length; ++i) {
     const item = data[i];
+    const lFilter = filter.toUpperCase();
+
+    if (
+      lFilter &&
+      (!item.name.toUpperCase().includes(lFilter) &&
+        !item.description.toUpperCase().includes(lFilter) &&
+        !item.ressource.join(" ").toUpperCase().includes(lFilter) &&
+        !item.address.toUpperCase().includes(lFilter))
+    ) {
+      continue;
+    }
 
     let row = `<tr>`;
     row += `<td></td>`;
