@@ -55,7 +55,7 @@
         }).show();
         */
 
-        var mymap = L.map("mapid").setView([47.554662, 7.589119], 13);
+        const map = L.map("mapid").setView([47.554662, 7.589119], 13);
 
         L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
           attribution:
@@ -66,18 +66,40 @@
           zoomOffset: -1,
           accessToken:
             "pk.eyJ1IjoidmljLWNvZGVjYW1wIiwiYSI6ImNrdGZueGZ1azBhMDYycG1yY2ZmNGJ4cWQifQ.xoYa6-TrQxRND1wHjGYkwg"
-        }).addTo(mymap);
+        }).addTo(map);
 
-        L.marker([47.554662, 7.589119])
-          .addTo(mymap)
-          .bindPopup("<b>Hello world!</b><br />I am a popup.")
-          .openPopup();
+        const addMarkers = function(map, items) {
+          const markers = [];
 
-        var onTitleSelectChange = function(e) {
+          const marker = L.marker([47.554662, 7.589119])
+            .addTo(map)
+            .bindPopup("<b>Hello world!</b><br />I am a popup.")
+            .openPopup();
+
+          markers.push(marker);
+
+          return markers;
+        };
+
+        const clearMarkers = function(map, markers) {
+          for (let i = 0; i < markers.length; ++i) {
+            map.removeLayer(markers[i]);
+          }
+        };
+
+        const onTitleSelectChange = function(e) {
           const selectedIndex = e.target.selectedIndex;
+          clearMarkers(map, markers);
+
+          if (selectedIndex === 0) {
+            markers = addMarkers(map, []);
+          }
         };
 
         $("#title-select select").change(onTitleSelectChange);
+
+        // global
+        var markers = addMarkers(map, []);
       });
     </script>
 
@@ -160,11 +182,11 @@
                 <span class="is-size-2 has-text-centered is-block">
                   We are a(n)
                   <div id="title-select" class="select">
-                  <select id="">
-                    <option value="startup">Startup</option>
-                    <option value="investor">Investor</option>
-                  </select>
-                </div>
+                    <select id="">
+                      <option value="startup">Startup</option>
+                      <option value="investor">Investor</option>
+                    </select>
+                  </div>
                 </span>
               </h1>
             </div>
