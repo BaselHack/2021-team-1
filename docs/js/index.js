@@ -36,6 +36,11 @@ $(document).ready(function() {
     $("#title-select select").change(onTitleSelectChange);
     $("#data-table-filter").keyup(onDataTableFilterChange);
     $("#data-table-filter").change(onDataTableFilterChange);
+    $("#data-table-filter-clear").click(function() {
+      $("#data-table-filter")
+        .val("")
+        .trigger("change");
+    });
 
     $("#data-table tbody").html(getDataTableRowsHTML(data, ""));
   });
@@ -152,5 +157,7 @@ const getDataTableRowsHTML = function(data, filter) {
 const onClickTag = function(elem) {
   const value = elem.innerText;
   console.log(value);
-  $("#data-table-filter").val(value).trigger("change");
+  $("#data-table-filter")
+    .val(value)
+    .trigger("change");
 };
