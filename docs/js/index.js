@@ -35,6 +35,7 @@ $(document).ready(function() {
 
     $("#title-select select").change(onTitleSelectChange);
     $("#data-table-filter").keyup(onDataTableFilterChange);
+    $("#data-table-filter").change(onDataTableFilterChange);
 
     $("#data-table tbody").html(getDataTableRowsHTML(data, ""));
   });
@@ -121,7 +122,10 @@ const getDataTableRowsHTML = function(data, filter) {
       lFilter &&
       (!item.name.toUpperCase().includes(lFilter) &&
         !item.description.toUpperCase().includes(lFilter) &&
-        !item.ressource.join(" ").toUpperCase().includes(lFilter) &&
+        !item.ressource
+          .join(" ")
+          .toUpperCase()
+          .includes(lFilter) &&
         !item.address.toUpperCase().includes(lFilter))
     ) {
       continue;
@@ -134,11 +138,19 @@ const getDataTableRowsHTML = function(data, filter) {
     row += `<td>${item.email}</td>`;
     row += `<td>${item.address}</td>`;
     row += `<td>${item.website}</td>`;
-    row += `<td><div class="tags">${item.ressource.map(r => `<span class="tag">${r}</span>`).join(" ")}</div></td>`;
+    row += `<td><div class="tags">${item.ressource
+      .map(r => `<span class="tag is-link is-light" onclick="onClickTag(this)">${r}</span>`)
+      .join(" ")}</div></td>`;
     row += `</tr>`;
 
     result.push(row);
   }
 
   return result;
+};
+
+const onClickTag = function(elem) {
+  const value = elem.innerText;
+  console.log(value);
+  $("#data-table-filter").val(value).trigger("change");
 };

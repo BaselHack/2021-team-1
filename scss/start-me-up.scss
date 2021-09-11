@@ -85,6 +85,12 @@ table.center {
   margin-right: auto;
 }
 
+.tags {
+  .is-link {
+    cursor: pointer;
+  }
+}
+
 /*
 .noty_body {
   word-break: break-all;
