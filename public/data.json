@@ -13,5 +13,22 @@
 		"latlong" : [47.53525,7.64066],
 		"address" : "The 5th Floor\nHofackerstrasse 40\n4132 Muttenz\nSchweiz",
 		"website" : "https://www.the5thfloor.ch/de/"
+	},
+	{
+		"meta" : {
+			"id" : "6bffe385-e7ca-4917-8e96-1c695fd21996",
+			"lastUpdated" : 1631361757964,
+			"owner" : "matthias.cullmann@gmail.com" 
+		},
+		"name": "Innovation Basel",
+		"description": "INNOVATION BASEL ist ein Programm aus der Region für die Region, welches einzelne, wenige Projekte individuell und bedarfsgerecht fördert, indem Wissen und Erfahrung direkt von lokalen Expert*innen und deren regionalem Netzwerk weitergegeben werden.",
+		"image": "https://dl.airtable.com/.attachments/ba202f1c248a242851a6160b40f888cc/37e93c10/image.png",
+		"ressource" : ["Accelerator"],
+		"email" : "",
+		"latlong" : [47.54115,7.59287],
+		"address" : "LaunchLabs Basel\nDornacherstrasse 192\n4053 Basel",
+		"website" : "https://www.innovationbasel.ch/"
 	}
 ]
+
+	 			
