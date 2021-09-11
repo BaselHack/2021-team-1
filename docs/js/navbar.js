@@ -40,16 +40,20 @@ $(document).ready(function() {
       <a class="navbar-item ${pathname === "/events.html" ? "is-active" : ""}" href="events.html">
         Events
       </a>
-      <a class="navbar-item" href="community.html">
+      <a class="navbar-item ${pathname === "/community.html" ? "is-active" : ""}" href="community.html">
         Community
       </a>
-      <a class="navbar-item" href="starting-a-company-in-switzerland.html">
+      <a class="navbar-item ${
+        pathname === "/starting-a-company-in-switzerland.html" ? "is-active" : ""
+      }" href="starting-a-company-in-switzerland.html">
         Starting a Company in Basel/Switzerland
       </a>
-      <a class="navbar-item" href="investing-in-switzerland.html">
+      <a class="navbar-item ${
+        pathname === "/investing-in-switzerland.html" ? "is-active" : ""
+      }" href="investing-in-switzerland.html">
         Investing in Basel/Switzerland
       </a>
-      <a class="navbar-item" href="about.html">
+      <a class="navbar-item ${pathname === "/about.html" ? "is-active" : ""}" href="about.html">
         About
       </a>
     </div>
