@@ -1,10 +1,16 @@
 [
 	{
+		"meta" : {
+			"id" : "406c1cec-12d9-4530-b0e5-f1a1fc5177ad",
+			"lastUpdated" : 1631361271040,
+			"owner" : "matthias.cullmann@gmail.com" 
+		},
 		"name": "The 5th Floor",
 		"description": "Das Coworking Space 'The 5th Floor' in Muttenz bei Basel bietet ein motivierendes und fortschrittliches Umfeld, das junge Talente fördert, sie in der Entwicklung von Visionen und Zielen unterstützt und ihnen zu Erfolg verhilft. Hier treten sie in Kontakt zu Unternehmen, die an den Lösungen der Zukunft arbeiten.",
 		"image": "https://dl.airtable.com/.attachments/e57bef229d72b8d613ff2e4fc5e21a28/0da1f00d/image.png",
 		"ressource" : ["Infrastructure","Rent Spaces","Co-Working","Laboratory Space","Coaching"],
 		"email" : "hello@the5thfloor.ch",
+		"latlong" : [1,2]
 		"address" : "The 5th Floor\nHofackerstrasse 40\n4132 Muttenz\nSchweiz",
 		"website" : "https://www.the5thfloor.ch/de/"
 	}
