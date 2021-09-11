@@ -62,7 +62,7 @@ const startupResources = [
   "Competition"
 ];
 
-const investorResources = ["Workshop", "Competition"];
+const investorResources = ["Workshop", "Competition", "Start-Up"];
 
 const getPopupHTML = function(item) {
   const itemImage = `<p><figure class="image "><img src="${item.image}"></figure></p>`;
