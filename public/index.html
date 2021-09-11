@@ -45,8 +45,17 @@
           $(".navbar-menu").toggleClass("is-active");
         });
 
-        const startupResources = ["Infrastructure", "Accelerator"];
-        const investorResources = [];
+        const startupResources = [
+          "Infrastructure",
+          "Rent Spaces",
+          "Co-Working",
+          "Laboratory Space",
+          "Coaching",
+          "Accelerator",
+          "Workshop",
+          "Competition"
+        ];
+        const investorResources = ["Workshop", "Competition"];
 
         const map = L.map("mapid").setView([47.541232, 7.604589], 13);
 
@@ -117,6 +126,8 @@
 
             if (selectedIndex === 0) {
               markers = addMarkers(map, filterByResources(data, startupResources));
+            } else if (selectedIndex === 1) {
+              markers = addMarkers(map, filterByResources(data, investorResources));
             }
           };
 
