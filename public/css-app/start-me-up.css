@@ -7881,10 +7881,17 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   .footer a:hover {
     color: white; }
 
+.footer.has-background-dark a:hover {
+  color: white; }
+
+#title-select {
+  margin-left: 1rem;
+  margin-top: -1.5rem; }
+  #title-select select {
+    font-weight: 600; }
+
 /*
 .noty_body {
   word-break: break-all;
 }
 */
-
-/*# sourceMappingURL=start-me-up.css.map */

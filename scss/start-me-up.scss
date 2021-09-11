@@ -65,6 +65,20 @@ $input-shadow: none;
   }
 }
 
+.footer.has-background-dark {
+  a:hover {
+    color: white;
+  }
+}
+
+#title-select {
+  margin-left: 1rem;
+  margin-top: -1.5rem;
+
+  select {
+    font-weight: 600;
+  }
+}
 /*
 .noty_body {
   word-break: break-all;
@@ -74,4 +88,3 @@ $input-shadow: none;
 //
 // ideas from https://aldi.github.io/awesome-bulma-templates/templates/rent/rent.html
 //
-
