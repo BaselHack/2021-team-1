@@ -80,7 +80,7 @@
 
         <section class="section">
           <div class="container">
-            <div id="mapid" style="height: calc(100vh - 40vh);"></div>
+            <div id="mapid" style="height: calc(100vh - 40vh)"></div>
           </div>
         </section>
 
@@ -97,25 +97,32 @@
                       <i class="fas fa-times-circle"></i>
                     </a>
                   </p>
+                  <p class="control">
+                    <a id="data-table-filter-map-mark" class="button is-large">
+                      <i class="fas fa-map-marked-alt"></i>
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="container mt-6">
-            <table id="data-table" class="table center is-striped is-fullwidth is-hoverable">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th><abbr title="Name">Name</abbr></th>
-                  <th><abbr title="Description">Description</abbr></th>
-                  <th><abbr title="Email">Email</abbr></th>
-                  <th><abbr title="Address">Address</abbr></th>
-                  <th><abbr title="Website">Website</abbr></th>
-                  <th><abbr title="Tags">Tags</abbr></th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+            <div class="table-container">
+              <table id="data-table" class="table center is-striped is-fullwidth is-hoverable">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th><abbr title="Name">Name</abbr></th>
+                    <th><abbr title="Description">Description</abbr></th>
+                    <th class="is-hidden-mobile"><abbr title="Email">Email</abbr></th>
+                    <th class="is-hidden-mobile"><abbr title="Address">Address</abbr></th>
+                    <th class=""><abbr title="Website">Website</abbr></th>
+                    <th><abbr title="Tags">Tags</abbr></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
           </div>
         </section>
       </div>

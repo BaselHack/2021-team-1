@@ -82,6 +82,12 @@ $input-shadow: none;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #title-select {
+    margin-top: 0.5rem;
+  } 
+}
+
 table.center {
   margin-left: auto;
   margin-right: auto;
@@ -91,6 +97,10 @@ table.center {
   .is-link {
     cursor: pointer;
   }
+}
+
+.word-break-all {
+  word-break: break-all;
 }
 
 /*

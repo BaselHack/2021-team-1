@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   const map = L.map("mapid").setView([47.541232, 7.604589], 13);
 
   L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -8,16 +8,16 @@ $(document).ready(function() {
     id: "mapbox/streets-v11",
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: "pk.eyJ1IjoidmljLWNvZGVjYW1wIiwiYSI6ImNrdGZueGZ1azBhMDYycG1yY2ZmNGJ4cWQifQ.xoYa6-TrQxRND1wHjGYkwg"
+    accessToken: "pk.eyJ1IjoidmljLWNvZGVjYW1wIiwiYSI6ImNrdGZueGZ1azBhMDYycG1yY2ZmNGJ4cWQifQ.xoYa6-TrQxRND1wHjGYkwg",
   }).addTo(map);
 
-  $.getJSON("data.json", function(data) {
+  $.getJSON("data.json", function (data) {
     console.log(data);
 
     // global
     var markers = addMarkers(map, filterByResources(data, startupResources));
 
-    const onTitleSelectChange = function(e) {
+    const onTitleSelectChange = function (e) {
       const selectedIndex = e.target.selectedIndex;
       clearMarkers(map, markers);
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
       }
     };
 
-    const onDataTableFilterChange = function(e) {
+    const onDataTableFilterChange = function (e) {
       const value = e.target.value;
       $("#data-table tbody").html(getDataTableRowsHTML(data, value));
     };
@@ -40,10 +40,15 @@ $(document).ready(function() {
     $("#title-select select").change(onTitleSelectChange);
     $("#data-table-filter").keyup(onDataTableFilterChange);
     $("#data-table-filter").change(onDataTableFilterChange);
-    $("#data-table-filter-clear").click(function() {
-      $("#data-table-filter")
-        .val("")
-        .trigger("change");
+    $("#data-table-filter-clear").click(function () {
+      $("#data-table-filter").val("").trigger("change");
+    });
+
+    $("#data-table-filter-map-mark").click(function () {
+      const filterValue = $("#data-table-filter").val();
+      const filteredItems = getDataTableItems(data, filterValue);
+      clearMarkers(map, markers);
+      markers = addMarkers(map, filteredItems);
     });
 
     $("#data-table tbody").html(getDataTableRowsHTML(data, ""));
@@ -68,14 +73,14 @@ const startupResources = [
   "Coaching",
   "Accelerator",
   "Workshop",
-  "Competition"
+  "Competition",
 ];
 
 const investorResources = ["Workshop", "Competition", "Start-Up"];
 
-const getPopupHTML = function(item) {
+const getPopupHTML = function (item) {
   const itemImage = `<p><figure class="image "><img src="${item.image}"></figure></p>`;
-  const tagsHTML = `<p class="tags">${item.ressource.map(r => `<span class="tag">${r}</span>`).join(" ")}</p>`;
+  const tagsHTML = `<p class="tags">${item.ressource.map((r) => `<span class="tag">${r}</span>`).join(" ")}</p>`;
 
   const result = `<p><b><a href="${item.website}">${item.name}</a></b></p><p>${item.description}</p>${tagsHTML}`;
   if(item.zefixUID != "") {
@@ -84,16 +89,13 @@ const getPopupHTML = function(item) {
   return result;
 };
 
-const addMarkers = function(map, items) {
+const addMarkers = function (map, items) {
   const markers = [];
 
   for (let i = 0; i < items.length; ++i) {
     const item = items[i];
 
-    const marker = L.marker(item.latlong)
-      .addTo(map)
-      .bindPopup(getPopupHTML(item))
-      .openPopup();
+    const marker = L.marker(item.latlong).addTo(map).bindPopup(getPopupHTML(item)).openPopup();
 
     markers.push(marker);
   }
@@ -101,13 +103,13 @@ const addMarkers = function(map, items) {
   return markers;
 };
 
-const clearMarkers = function(map, markers) {
+const clearMarkers = function (map, markers) {
   for (let i = 0; i < markers.length; ++i) {
     map.removeLayer(markers[i]);
   }
 };
 
-const filterByResources = function(data, resources) {
+const filterByResources = function (data, resources) {
   const result = [];
 
   for (let i = 0; i < data.length; ++i) {
@@ -122,35 +124,23 @@ const filterByResources = function(data, resources) {
   return result;
 };
 
-const getDataTableRowsHTML = function(data, filter) {
+const getDataTableRowsHTML = function (data, filter) {
   const result = [];
 
-  for (let i = 0; i < data.length; ++i) {
-    const item = data[i];
-    const lFilter = filter.toUpperCase();
+  const items = getDataTableItems(data, filter);
 
-    if (
-      lFilter &&
-      (!item.name.toUpperCase().includes(lFilter) &&
-        !item.description.toUpperCase().includes(lFilter) &&
-        !item.ressource
-          .join(" ")
-          .toUpperCase()
-          .includes(lFilter) &&
-        !item.address.toUpperCase().includes(lFilter))
-    ) {
-      continue;
-    }
+  for (let i = 0; i < items.length; ++i) {
+    const item = items[i];
 
     let row = `<tr>`;
     row += `<td></td>`;
     row += `<td>${item.name}</td>`;
     row += `<td>${item.description}</td>`;
-    row += `<td>${item.email}</td>`;
-    row += `<td>${item.address}</td>`;
-    row += `<td>${item.website}</td>`;
+    row += `<td class="is-hidden-mobile">${item.email}</td>`;
+    row += `<td class="is-hidden-mobile">${item.address}</td>`;
+    row += `<td class="word-break-all"><a href="${item.website}" class="">${item.website}</a></td>`;
     row += `<td><div class="tags">${item.ressource
-      .map(r => `<span class="tag is-link is-light" onclick="onClickTag(this)">${r}</span>`)
+      .map((r) => `<span class="tag is-link is-light" onclick="onClickTag(this)">${r}</span>`)
       .join(" ")}</div></td>`;
     row += `</tr>`;
 
@@ -160,10 +150,31 @@ const getDataTableRowsHTML = function(data, filter) {
   return result;
 };
 
-const onClickTag = function(elem) {
+const getDataTableItems = function (data, filter) {
+  const result = [];
+
+  for (let i = 0; i < data.length; ++i) {
+    const item = data[i];
+    const lFilter = filter.toUpperCase();
+
+    if (
+      lFilter &&
+      !item.name.toUpperCase().includes(lFilter) &&
+      !item.description.toUpperCase().includes(lFilter) &&
+      !item.ressource.join(" ").toUpperCase().includes(lFilter) &&
+      !item.address.toUpperCase().includes(lFilter)
+    ) {
+      continue;
+    }
+
+    result.push(item);
+  }
+
+  return result;
+};
+
+const onClickTag = function (elem) {
   const value = elem.innerText;
   console.log(value);
-  $("#data-table-filter")
-    .val(value)
-    .trigger("change");
+  $("#data-table-filter").val(value).trigger("change");
 };
