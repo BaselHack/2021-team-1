@@ -6,6 +6,7 @@
 			"owner" : "matthias.cullmann@gmail.com" 
 		},
 		"name": "The 5th Floor",
+		"zefixUID": "CHE-109.521.323",
 		"description": "Das Coworking Space 'The 5th Floor' in Muttenz bei Basel bietet ein motivierendes und fortschrittliches Umfeld, das junge Talente fördert, sie in der Entwicklung von Visionen und Zielen unterstützt und ihnen zu Erfolg verhilft. Hier treten sie in Kontakt zu Unternehmen, die an den Lösungen der Zukunft arbeiten.",
 		"image": "https://dl.airtable.com/.attachments/e57bef229d72b8d613ff2e4fc5e21a28/0da1f00d/image.png",
 		"ressource" : ["Infrastructure","Rent Spaces","Co-Working","Laboratory Space","Coaching"],
@@ -21,6 +22,7 @@
 			"owner" : "matthias.cullmann@gmail.com" 
 		},
 		"name": "Innovation Basel",
+		"zefixUID": "",
 		"description": "INNOVATION BASEL ist ein Programm aus der Region für die Region, welches einzelne, wenige Projekte individuell und bedarfsgerecht fördert, indem Wissen und Erfahrung direkt von lokalen Expert*innen und deren regionalem Netzwerk weitergegeben werden.",
 		"image": "https://dl.airtable.com/.attachments/ba202f1c248a242851a6160b40f888cc/37e93c10/image.png",
 		"ressource" : ["Accelerator"],
@@ -36,6 +38,7 @@
 			"owner" : "matthias.cullmann@gmail.com" 
 		},
 		"name": "BaselHack",
+		"zefixUID": "",
 		"description": "BaselHack is an annual hackathon that has been held since 2017. Young and young-at-heart developers, technology fanatics, designers and other interested persons meet in every autumn and spend a weekend tinkering and developing various ideas. The goal of the hackathon is to get from an idea or a concrete problem to a first, functional prototype (software or hardware) in just a few hours. At the end of the hackathon weekend, the teams - which have come together at the beginning of the hackathon - present their prototypes. A technically experienced jury looks at the presentations and prototypes, and chooses the best in various categories.",
 		"image": "https://www.baselhack.ch/images/app/logos/baselhack_color.svg",
 		"ressource" : ["Workshop","Competition"],
@@ -51,6 +54,7 @@
 			"owner" : "vic@smalldata.tech" 
 		},
 		"name": "RapMed",
+		"zefixUID": "CHE-293.504.915",
 		"description": "Interactive training sessions and real world cases allow you to improve your radiological skills.",
 		"image": "",
 		"ressource" : ["Start-Up"],

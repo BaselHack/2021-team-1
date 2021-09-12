@@ -74,7 +74,9 @@ const getPopupHTML = function(item) {
   const tagsHTML = `<p class="tags">${item.ressource.map(r => `<span class="tag">${r}</span>`).join(" ")}</p>`;
 
   const result = `<p><b><a href="${item.website}">${item.name}</a></b></p><p>${item.description}</p>${tagsHTML}`;
-
+  if(item.zefixUID != "") {
+	return result + "<a target=\"zefix\" href='https://www.uid.admin.ch/Detail.aspx?uid_id=" +item.zefixUID+"'>"+item.zefixUID+"</a>";
+  }	
   return result;
 };
 
