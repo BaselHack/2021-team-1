@@ -32,8 +32,11 @@ $(document).ready(function() {
       <a class="navbar-item ${pathname === "/events.html" ? "is-active" : ""}" href="events.html">
         Events
       </a>
-      <a class="navbar-item ${pathname === "/community.html" ? "is-active" : ""}" href="community.html">
-        Community
+      <a class="navbar-item ${pathname === "/pinboard.html" ? "is-active" : ""}" href="pinboard.html">
+        Pin board
+      </a>
+      <a class="navbar-item ${pathname === "/forum.html" ? "is-active" : ""}" href="forum.html">
+        Forum
       </a>
       <a class="navbar-item ${
         pathname === "/starting-a-company-in-switzerland.html" ? "is-active" : ""
