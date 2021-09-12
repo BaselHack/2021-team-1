@@ -22,8 +22,12 @@ $(document).ready(function() {
       clearMarkers(map, markers);
 
       if (selectedIndex === 0) {
+	    $("#investLink").css("display", "none");
+	    $("#startLink").css("display", "inherit");
         markers = addMarkers(map, filterByResources(data, startupResources));
       } else if (selectedIndex === 1) {
+	    $("#investLink").css("display", "inherit");
+	    $("#startLink").css("display", "none");
         markers = addMarkers(map, filterByResources(data, investorResources));
       }
     };

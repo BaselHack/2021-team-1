@@ -38,12 +38,14 @@ $(document).ready(function() {
       <a class="navbar-item ${pathname === "/forum.html" ? "is-active" : ""}" href="forum.html">
         Forum
       </a>
-      <a class="navbar-item ${
+      <a id="startLink" class="navbar-item ${
         pathname === "/starting-a-company-in-switzerland.html" ? "is-active" : ""
       }" href="starting-a-company-in-switzerland.html">
         Starting a Company
       </a>
-      <a class="navbar-item ${
+      <a id="investLink" style="display:${
+        pathname === "/index.html" ? "none" : "inherit"
+      };" class="navbar-item ${
         pathname === "/investing-in-switzerland.html" ? "is-active" : ""
       }" href="investing-in-switzerland.html">
         Investing
