@@ -74,9 +74,11 @@ const startupResources = [
   "Accelerator",
   "Workshop",
   "Competition",
+  "Funding",
+  "Venture Capital",
 ];
 
-const investorResources = ["Workshop", "Competition", "Start-Up"];
+const investorResources = ["Workshop", "Competition", "Start-Up", "Funding", "Venture Capital"];
 
 const getPopupHTML = function (item) {
   const itemImage = `<p><figure class="image "><img src="${item.image}"></figure></p>`;
@@ -134,11 +136,11 @@ const getDataTableRowsHTML = function (data, filter) {
 
     let row = `<tr>`;
     row += `<td></td>`;
-    row += `<td>${item.name}</td>`;
+    row += `<td><a href="${item.website}">${item.name}</a></td>`;
     row += `<td>${item.description}</td>`;
     row += `<td class="is-hidden-mobile">${item.email}</td>`;
     row += `<td class="is-hidden-mobile">${item.address}</td>`;
-    row += `<td class="word-break-all"><a href="${item.website}" class="">${item.website}</a></td>`;
+    // row += `<td class="word-break-all"><a href="${item.website}" class="">${item.website}</a></td>`;
     row += `<td><div class="tags">${item.ressource
       .map((r) => `<span class="tag is-link is-light" onclick="onClickTag(this)">${r}</span>`)
       .join(" ")}</div></td>`;

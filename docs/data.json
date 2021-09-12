@@ -1,68 +1,130 @@
 [
-	{
-		"meta" : {
-			"id" : "406c1cec-12d9-4530-b0e5-f1a1fc5177ad",
-			"lastUpdated" : 1631361271040,
-			"owner" : "matthias.cullmann@gmail.com" 
-		},
-		"name": "The 5th Floor",
-		"zefixUID": "CHE-109.521.323",
-		"description": "Das Coworking Space 'The 5th Floor' in Muttenz bei Basel bietet ein motivierendes und fortschrittliches Umfeld, das junge Talente fördert, sie in der Entwicklung von Visionen und Zielen unterstützt und ihnen zu Erfolg verhilft. Hier treten sie in Kontakt zu Unternehmen, die an den Lösungen der Zukunft arbeiten.",
-		"image": "https://dl.airtable.com/.attachments/e57bef229d72b8d613ff2e4fc5e21a28/0da1f00d/image.png",
-		"ressource" : ["Infrastructure","Rent Spaces","Co-Working","Laboratory Space","Coaching"],
-		"email" : "hello@the5thfloor.ch",
-		"latlong" : [47.53525,7.64066],
-		"address" : "The 5th Floor\nHofackerstrasse 40\n4132 Muttenz\nSchweiz",
-		"website" : "https://www.the5thfloor.ch/de/"
-	},
-	{
-		"meta" : {
-			"id" : "6bffe385-e7ca-4917-8e96-1c695fd21996",
-			"lastUpdated" : 1631361757964,
-			"owner" : "matthias.cullmann@gmail.com" 
-		},
-		"name": "Innovation Basel",
+  {
+    "meta": {
+      "id": "406c1cec-12d9-4530-b0e5-f1a1fc5177ad",
+      "lastUpdated": 1631361271040,
+      "owner": "matthias.cullmann@gmail.com"
+    },
+    "name": "The 5th Floor",
+    "zefixUID": "CHE-109.521.323",
+    "description": "Das Coworking Space 'The 5th Floor' in Muttenz bei Basel bietet ein motivierendes und fortschrittliches Umfeld, das junge Talente fördert, sie in der Entwicklung von Visionen und Zielen unterstützt und ihnen zu Erfolg verhilft. Hier treten sie in Kontakt zu Unternehmen, die an den Lösungen der Zukunft arbeiten.",
+    "image": "https://dl.airtable.com/.attachments/e57bef229d72b8d613ff2e4fc5e21a28/0da1f00d/image.png",
+    "ressource": ["Infrastructure", "Rent Spaces", "Co-Working", "Laboratory Space", "Coaching"],
+    "email": "hello@the5thfloor.ch",
+    "latlong": [47.53525, 7.64066],
+    "address": "The 5th Floor\nHofackerstrasse 40\n4132 Muttenz\nSchweiz",
+    "website": "https://www.the5thfloor.ch/de/"
+  },
+  {
+    "meta": {
+      "id": "6bffe385-e7ca-4917-8e96-1c695fd21996",
+      "lastUpdated": 1631361757964,
+      "owner": "matthias.cullmann@gmail.com"
+    },
+    "name": "Innovation Basel",
+    "zefixUID": "",
+    "description": "INNOVATION BASEL ist ein Programm aus der Region für die Region, welches einzelne, wenige Projekte individuell und bedarfsgerecht fördert, indem Wissen und Erfahrung direkt von lokalen Expert*innen und deren regionalem Netzwerk weitergegeben werden.",
+    "image": "https://dl.airtable.com/.attachments/ba202f1c248a242851a6160b40f888cc/37e93c10/image.png",
+    "ressource": ["Accelerator"],
+    "email": "",
+    "latlong": [47.54115, 7.59287],
+    "address": "LaunchLabs Basel\nDornacherstrasse 192\n4053 Basel",
+    "website": "https://www.innovationbasel.ch/"
+  },
+  {
+    "meta": {
+      "id": "0671e3c6-a860-4cdc-b77b-3551aeac81d4",
+      "lastUpdated": 1631362656526,
+      "owner": "matthias.cullmann@gmail.com"
+    },
+    "name": "BaselHack",
+    "zefixUID": "",
+    "description": "BaselHack is an annual hackathon that has been held since 2017. Young and young-at-heart developers, technology fanatics, designers and other interested persons meet in every autumn and spend a weekend tinkering and developing various ideas. The goal of the hackathon is to get from an idea or a concrete problem to a first, functional prototype (software or hardware) in just a few hours. At the end of the hackathon weekend, the teams - which have come together at the beginning of the hackathon - present their prototypes. A technically experienced jury looks at the presentations and prototypes, and chooses the best in various categories.",
+    "image": "https://www.baselhack.ch/images/app/logos/baselhack_color.svg",
+    "ressource": ["Workshop", "Competition"],
+    "email": "info@baselhack.ch",
+    "latlong": [47.5539521, 7.5949911],
+    "address": "Dufourstr. 11\nBasel 4010\nSwitzerland",
+    "website": "https://www.baselhack.ch/"
+  },
+  {
+    "meta": {
+      "id": "0671e3c6-a860-4cdc-b77b-3551aeac81d4",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "RapMed",
+    "zefixUID": "CHE-293.504.915",
+    "description": "Interactive training sessions and real world cases allow you to improve your radiological skills.",
+    "image": "",
+    "ressource": ["Start-Up"],
+    "email": "victor.parmar@usb.ch",
+    "latlong": [47.562283, 7.584148],
+    "address": "Spitalstrasse 8, Basel",
+    "website": "https://www.rapmed.net/"
+  },
+  {
+    "meta": {
+      "id": "111118e2-3240-4850-bc1a-d0c3dabe4ebc",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "Launchpad",
 		"zefixUID": "",
-		"description": "INNOVATION BASEL ist ein Programm aus der Region für die Region, welches einzelne, wenige Projekte individuell und bedarfsgerecht fördert, indem Wissen und Erfahrung direkt von lokalen Expert*innen und deren regionalem Netzwerk weitergegeben werden.",
-		"image": "https://dl.airtable.com/.attachments/ba202f1c248a242851a6160b40f888cc/37e93c10/image.png",
-		"ressource" : ["Accelerator"],
-		"email" : "",
-		"latlong" : [47.54115,7.59287],
-		"address" : "LaunchLabs Basel\nDornacherstrasse 192\n4053 Basel",
-		"website" : "https://www.innovationbasel.ch/"
-	},
-	{
-		"meta" : {
-			"id" : "0671e3c6-a860-4cdc-b77b-3551aeac81d4",
-			"lastUpdated" : 1631362656526,
-			"owner" : "matthias.cullmann@gmail.com" 
-		},
-		"name": "BaselHack",
+    "description": "The world of financial services is transforming and more ready than ever for thoughtful disruption.",
+    "image": "https://dl.airtable.com/.attachments/6af257e51b9a5a78031251f4281c9ab0/95ae8bf9/image.png",
+    "ressource": ["Funding", "Venture Capital"],
+    "email": "hello@launchpad.vc",
+    "latlong": [37.810997, -122.267388],
+    "address": "Launchpad\n2201 Broadway\nSuite 705\nOakland CA 94612",
+    "website": "https://www.launchpad.vc/"
+  },
+  {
+    "meta": {
+      "id": "0bcb81c6-b54d-4466-8df3-aedca7a5b1d3",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "Startup Academy Basel",
 		"zefixUID": "",
-		"description": "BaselHack is an annual hackathon that has been held since 2017. Young and young-at-heart developers, technology fanatics, designers and other interested persons meet in every autumn and spend a weekend tinkering and developing various ideas. The goal of the hackathon is to get from an idea or a concrete problem to a first, functional prototype (software or hardware) in just a few hours. At the end of the hackathon weekend, the teams - which have come together at the beginning of the hackathon - present their prototypes. A technically experienced jury looks at the presentations and prototypes, and chooses the best in various categories.",
-		"image": "https://www.baselhack.ch/images/app/logos/baselhack_color.svg",
-		"ressource" : ["Workshop","Competition"],
-		"email" : "info@baselhack.ch",
-		"latlong" : [47.5539521, 7.5949911],
-		"address" : "Dufourstr. 11\nBasel 4010\nSwitzerland",
-		"website" : "https://www.baselhack.ch/"
-	},
-	{
-		"meta" : {
-			"id" : "0671e3c6-a860-4cdc-b77b-3551aeac81d4",
-			"lastUpdated" : 1631374396000,
-			"owner" : "vic@smalldata.tech" 
-		},
-		"name": "RapMed",
-		"zefixUID": "CHE-293.504.915",
-		"description": "Interactive training sessions and real world cases allow you to improve your radiological skills.",
-		"image": "",
-		"ressource" : ["Start-Up"],
-		"email" : "victor.parmar@usb.ch",
-		"latlong" : [47.562283, 7.584148],
-		"address" : "Spitalstrasse 8, Basel",
-		"website" : "https://www.rapmed.net/"
-	}
+    "description": "Die Startup Academy ist ein gemeinnütziger Verein, der in der ganzen Schweiz Startups mit der Wirtschaft und den Hochschulen vernetzt. Wenn du eine Geschäftsidee hast, dich für das Thema Entrepreneurship und Innovation interessierst, nach einer Arbeits- und Babypause wieder einsteigen willst oder während einer Festanstellung von der beruflichen Selbstständigkeit träumst, dann bist du bei der Startup Academy herzlich willkommen.",
+    "image": "https://dl.airtable.com/.attachments/26e94a97f5c5c277c50f3733b3a48f8f/ed747217/image.png",
+    "ressource": ["Infrastructure", "Co-Working", "Coaching"],
+    "email": "info@startup-academy.ch",
+    "latlong": [47.553281, 7.59523],
+    "address": "Picassoplatz 4\n4052 Basel",
+    "website": "https://startup-academy.ch/basel/"
+  },
+  {
+    "meta": {
+      "id": "0bcb81c6-b54d-4466-8df3-aedca7a5b1d3",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "Startup Academy Liestal",
+		"zefixUID": "",
+    "description": "Die Startup Academy ist ein gemeinnütziger Verein, der in der ganzen Schweiz Startups mit der Wirtschaft und den Hochschulen vernetzt. Wenn du eine Geschäftsidee hast, dich für das Thema Entrepreneurship und Innovation interessierst, nach einer Arbeits- und Babypause wieder einsteigen willst oder während einer Festanstellung von der beruflichen Selbstständigkeit träumst, dann bist du bei der Startup Academy herzlich willkommen.",
+    "image": "https://dl.airtable.com/.attachments/e57bef229d72b8d613ff2e4fc5e21a28/0da1f00d/image.png",
+    "ressource": ["Infrastructure", "Co-Working", "Coaching"],
+    "email": "info@startup-academy.ch",
+    "latlong": [47.478782, 7.747432],
+    "address": "Grammetstrasse 14\n4410 Liestal",
+    "website": "https://startup-academy.ch/liestal/"
+  },
+  {
+    "meta": {
+      "id": "0bcb81c6-b54d-4466-8df3-aedca7a5b1d3",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "Launchlabs",
+		"zefixUID": "",
+    "description": "Wir sind eine Community aus Experten für agile Ansätze, kreative Arbeitswelten und Transformation. Je nach Bedarf stellen wir das passende Team für Sie zusammen.",
+    "image": "https://dl.airtable.com/.attachments/5915d273ba0d8a06f8e04b8a383bd72e/4a0bb67d/image.png",
+    "ressource": ["Infrastructure", "Co-Working", "Coaching", "Rent Spaces"],
+    "email": "info@launchlabs.ch",
+    "latlong": [47.541525, 7.592875],
+    "address": "Gundeldinger Feld Halle 8\nDornacherstrasse 192\n4053 Basel\nSwitzerland\n",
+    "website": "https://launchlabs.ch/de/"
+  }
 ]
-
-	 			
