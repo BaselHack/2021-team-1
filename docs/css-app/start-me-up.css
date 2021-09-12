@@ -7875,6 +7875,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   text-decoration: underline; }
 
 .footer {
+  margin-top: 2rem;
   padding: 3rem 1.5rem 3rem; }
   .footer p + p {
     margin-top: 1rem; }
@@ -7890,12 +7891,19 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   #title-select select {
     font-weight: 600; }
 
+@media only screen and (max-width: 768px) {
+  #title-select {
+    margin-top: 0.5rem; } }
+
 table.center {
   margin-left: auto;
   margin-right: auto; }
 
 .tags .is-link {
   cursor: pointer; }
+
+.word-break-all {
+  word-break: break-all; }
 
 /*
 .noty_body {
