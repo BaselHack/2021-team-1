@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   $("#navbar").html(`<div class="container">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">
+    <a class="navbar-item" href="index.html">
       🚀 In Basel
       <!--
       <figure class="image">
