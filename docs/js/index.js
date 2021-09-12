@@ -22,12 +22,12 @@ $(document).ready(function () {
       clearMarkers(map, markers);
 
       if (selectedIndex === 0) {
-	    $("#investLink").css("display", "none");
-	    $("#startLink").css("display", "inherit");
+        $("#investLink").css("display", "none");
+        $("#startLink").css("display", "inherit");
         markers = addMarkers(map, filterByResources(data, startupResources));
       } else if (selectedIndex === 1) {
-	    $("#investLink").css("display", "inherit");
-	    $("#startLink").css("display", "none");
+        $("#investLink").css("display", "inherit");
+        $("#startLink").css("display", "none");
         markers = addMarkers(map, filterByResources(data, investorResources));
       }
     };
@@ -76,18 +76,26 @@ const startupResources = [
   "Competition",
   "Funding",
   "Venture Capital",
+  "Support",
 ];
 
-const investorResources = ["Workshop", "Competition", "Start-Up", "Funding", "Venture Capital"];
+const investorResources = ["Workshop", "Competition", "Start-Up", "Funding", "Venture Capital", "Support"];
 
 const getPopupHTML = function (item) {
   const itemImage = `<p><figure class="image "><img src="${item.image}"></figure></p>`;
   const tagsHTML = `<p class="tags">${item.ressource.map((r) => `<span class="tag">${r}</span>`).join(" ")}</p>`;
 
   const result = `<p><b><a href="${item.website}">${item.name}</a></b></p><p>${item.description}</p>${tagsHTML}`;
-  if(item.zefixUID != "") {
-	return result + "<a target=\"zefix\" href='https://www.uid.admin.ch/Detail.aspx?uid_id=" +item.zefixUID+"'>"+item.zefixUID+"</a>";
-  }	
+  if (item.zefixUID != "") {
+    return (
+      result +
+      '<a target="zefix" href=\'https://www.uid.admin.ch/Detail.aspx?uid_id=' +
+      item.zefixUID +
+      "'>" +
+      item.zefixUID +
+      "</a>"
+    );
+  }
   return result;
 };
 
@@ -96,10 +104,10 @@ const addMarkers = function (map, items) {
 
   for (let i = 0; i < items.length; ++i) {
     const item = items[i];
-
-    const marker = L.marker(item.latlong).addTo(map).bindPopup(getPopupHTML(item)).openPopup();
-
-    markers.push(marker);
+    if (item.latlong && item.latlong.length === 2) {
+      const marker = L.marker(item.latlong).addTo(map).bindPopup(getPopupHTML(item)).openPopup();
+      markers.push(marker);
+    }
   }
 
   return markers;

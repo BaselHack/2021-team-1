@@ -75,7 +75,7 @@
     "image": "https://dl.airtable.com/.attachments/6af257e51b9a5a78031251f4281c9ab0/95ae8bf9/image.png",
     "ressource": ["Funding", "Venture Capital"],
     "email": "hello@launchpad.vc",
-    "latlong": [37.810997, -122.267388],
+    "latlong": null,
     "address": "Launchpad\n2201 Broadway\nSuite 705\nOakland CA 94612",
     "website": "https://www.launchpad.vc/"
   },
@@ -142,6 +142,22 @@
     "latlong": [47.558934, 7.54659],
     "address": "Gewerbestrasse 24, 2nd Floor\n4123 Allschwil, Switzerland",
     "website": "https://sip-baselarea.com/"
+  },
+  {
+    "meta": {
+      "id": "0bcb81c6-b54d-4466-8df3-aedca7a5b1d3",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "Basel Area",
+    "zefixUID": "",
+    "description": "Basel Area Business & Innovation ist eine Non-Profit-Agentur, die die Unternehmen, Institutionen und Startups dabei unterstützt, in der Basel Area erfolgreich zu sein. Als unabhängige Organisation, finanziert durch die Kantone Basel-Stadt, Basel-Landschaft und Jura sowie durch die Schweizer Regierung und private Stiftungen, fördern wir ein solides Wirtschaftsumfeld und unterstützen innovative Unternehmen. Wir helfen Firmen, sich in der Basel Area anzusiedeln, vernetzen Organisationen und Unternehmen mit Kooperationspartnern und tragen zum Ausbau eines dynamischen Ökosystems bei, das Innovationen begünstigt.",
+    "image": "https://dl.airtable.com/.attachments/66e9ba8e085eecf49b19e887b1db9a37/2fa9b003/image.png",
+    "ressource": ["Support"],
+    "email": "info@baselarea.swiss",
+    "latlong": [47.558934, 7.54659],
+    "address": "Dufourstrasse 11\n4010 Basel\nSwitzerland",
+    "website": "https://baselarea.swiss/de"
   },
   {
     "meta": {
