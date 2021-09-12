@@ -70,7 +70,7 @@
       "owner": "vic@smalldata.tech"
     },
     "name": "Launchpad",
-		"zefixUID": "",
+    "zefixUID": "",
     "description": "The world of financial services is transforming and more ready than ever for thoughtful disruption.",
     "image": "https://dl.airtable.com/.attachments/6af257e51b9a5a78031251f4281c9ab0/95ae8bf9/image.png",
     "ressource": ["Funding", "Venture Capital"],
@@ -86,7 +86,7 @@
       "owner": "vic@smalldata.tech"
     },
     "name": "Startup Academy Basel",
-		"zefixUID": "",
+    "zefixUID": "",
     "description": "Die Startup Academy ist ein gemeinnütziger Verein, der in der ganzen Schweiz Startups mit der Wirtschaft und den Hochschulen vernetzt. Wenn du eine Geschäftsidee hast, dich für das Thema Entrepreneurship und Innovation interessierst, nach einer Arbeits- und Babypause wieder einsteigen willst oder während einer Festanstellung von der beruflichen Selbstständigkeit träumst, dann bist du bei der Startup Academy herzlich willkommen.",
     "image": "https://dl.airtable.com/.attachments/26e94a97f5c5c277c50f3733b3a48f8f/ed747217/image.png",
     "ressource": ["Infrastructure", "Co-Working", "Coaching"],
@@ -102,7 +102,7 @@
       "owner": "vic@smalldata.tech"
     },
     "name": "Startup Academy Liestal",
-		"zefixUID": "",
+    "zefixUID": "",
     "description": "Die Startup Academy ist ein gemeinnütziger Verein, der in der ganzen Schweiz Startups mit der Wirtschaft und den Hochschulen vernetzt. Wenn du eine Geschäftsidee hast, dich für das Thema Entrepreneurship und Innovation interessierst, nach einer Arbeits- und Babypause wieder einsteigen willst oder während einer Festanstellung von der beruflichen Selbstständigkeit träumst, dann bist du bei der Startup Academy herzlich willkommen.",
     "image": "https://dl.airtable.com/.attachments/e57bef229d72b8d613ff2e4fc5e21a28/0da1f00d/image.png",
     "ressource": ["Infrastructure", "Co-Working", "Coaching"],
@@ -117,8 +117,40 @@
       "lastUpdated": 1631374396000,
       "owner": "vic@smalldata.tech"
     },
+    "name": "flexoffice",
+    "zefixUID": "",
+    "description": "Bei FlexOffice mietest du dein eigenes Büro: gross oder klein, ganz nach den Bedürfnissen deines Teams. Dazu stehen dir eine grosse Auswahl an hochmodernen Meetingräumen, Aktivitätszonen, Sitzecken, Lounges und Community-Küchen zur Verfügung. Diese kannst du frei nutzen, ohne Aufpreis, soviel du willst.",
+    "image": "https://dl.airtable.com/.attachments/6fd6722abed0cdbb51e996aea582f42c/5cfbebd5/image.png",
+    "ressource": ["Infrastructure", "Rent Spaces"],
+    "email": "info@flexoffice.swiss",
+    "latlong": [47.555146, 7.589335],
+    "address": "Barfüsserplatz 3\n4051 Basel",
+    "website": "https://flexoffice.swiss/buero-mieten-basel/"
+  },
+  {
+    "meta": {
+      "id": "0bcb81c6-b54d-4466-8df3-aedca7a5b1d3",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
+    "name": "Switzerland Innovation Park Basel Area",
+    "zefixUID": "",
+    "description": "Switzerland Innovation Park Basel Area offers four unique coworking spaces across the Baselarea, with locations in Basel, Jura, Allschwil and the Novartis Campus.\nStarting and growing your own business requires a lot of focus, at Switzerland Innovation Park Basel Area we offer you everything you need from day one. With our flexible coworking options, you and your employees can start their work on the very first day and dedicate time and effort to the most important tasks.\nOffering a state of the art coworking space for startups and companies in the field of biotech, medtech, digital health, healthtech and industrial transformation.\nGain access to a vibrant community of startups and companies, build your network and grow your business with startup accelerator programs.",
+    "image": "https://dl.airtable.com/.attachments/9ecad66fb8ac2690903e6213a7186064/26694c84/image.png",
+    "ressource": ["Infrastructure", "Laboratory Space", "Co-Working", "Coaching", "Rent Spaces"],
+    "email": "baselarea@switzerland-innovation.com",
+    "latlong": [47.558934, 7.54659],
+    "address": "Gewerbestrasse 24, 2nd Floor\n4123 Allschwil, Switzerland",
+    "website": "https://sip-baselarea.com/"
+  },
+  {
+    "meta": {
+      "id": "0bcb81c6-b54d-4466-8df3-aedca7a5b1d3",
+      "lastUpdated": 1631374396000,
+      "owner": "vic@smalldata.tech"
+    },
     "name": "Launchlabs",
-		"zefixUID": "",
+    "zefixUID": "",
     "description": "Wir sind eine Community aus Experten für agile Ansätze, kreative Arbeitswelten und Transformation. Je nach Bedarf stellen wir das passende Team für Sie zusammen.",
     "image": "https://dl.airtable.com/.attachments/5915d273ba0d8a06f8e04b8a383bd72e/4a0bb67d/image.png",
     "ressource": ["Infrastructure", "Co-Working", "Coaching", "Rent Spaces"],
