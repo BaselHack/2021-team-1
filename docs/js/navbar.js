@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   $("#navbar").html(`<div class="container">
   <div class="navbar-brand">
-    <a class="navbar-item" href="index.html">
+    <a class="navbar-item ${pathname === "/index.html" ? "is-active" : ""}" href="index.html">
       🚀 In Basel
       <!--
       <figure class="image">
@@ -29,9 +29,6 @@ $(document).ready(function() {
 
   <div id="" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="contribute.html">
-        Contribute
-      </a>
       <a class="navbar-item ${pathname === "/events.html" ? "is-active" : ""}" href="events.html">
         Events
       </a>
@@ -47,6 +44,9 @@ $(document).ready(function() {
         pathname === "/investing-in-switzerland.html" ? "is-active" : ""
       }" href="investing-in-switzerland.html">
         Investing
+      </a>
+      <a class="navbar-item ${pathname === "/contribute.html" ? "is-active" : ""}" href="contribute.html">
+        Contribute
       </a>
       <a class="navbar-item ${pathname === "/about.html" ? "is-active" : ""}" href="about.html">
         About&nbsp;<span style="color:#04689f;">Start</span><span style="color:#ffaa00;">Me</span><span style="color:#d40000;">Up</span>
